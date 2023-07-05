@@ -102,42 +102,46 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">COVID-19 IN ENGLAND AND WALES</a></h2>
+										<h2><a href="#">Spatial Data and Football</a></h2>
 								  </div>
 									<div class="meta">
 									  <p style="font-size: 16px;">
-										  <time class="published" datetime="2015-11-01">November, 2020&nbsp;</time>
+										  <time class="published" datetime="2015-11-01">June, 2021</time>
 									  </p>
                                     </div>
 								</header>
-								<p>This chapter illustrates my work on the geography of COVID-19 in England and Wales.  Using data sourced from the Office for National Statistics and Our World in Data, I have generated a few maps on the locational variations in deaths from COVID-19 and also total cases. </p>
-								<p>My initial projection shows the overall cases of COVID-19 in the UK throughout 2000 and 2022. Made in RStudio, the graphic shows the seven-day average and it is weighted heavily in the time periods where the UK has experienced the highest numbers of cases. 
-          <div style="max-width: 600px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/Spiral.jpg" alt="" style="width: 100%;" />
-            </span>
-          </div>
-							  <p>The following maps use data from an earlier time period.  I used QGIS to generate two cartograms which distort the data towards the higher totals, with the individual figure overlaid in choropleth form, and included a map of England and Wales to show the territories in their usual shape.  The calculation for the mass-based cartogram measures the deaths by COVID-19 data over the whole surface of each polygon.  This projects Greater London as a similar size to other regions.
-          <div style="max-width: 600px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/Mass2.jpeg" alt="" style="width: 100%;" />
-            </span>
-          </div>
-							  <p>The density equalizing cartogram furthers this analysis by calculating the ratio between the deaths by COVID-19 and the size of the region.  This calculation hugely distorts Greater London and projects the region as the largest polygon on the map.  This is because Greater London is the smallest region in England and Wales by area, but it demonstrates the highest deaths by COVID-19.
-          <div style="max-width: 500px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/Density.jpeg" alt="" style="width: 100%;" />
-            </span>
-          </div>
-							  <p>The final image takes choropleth form to highlight the number of deaths in the early stages of the pandemic, between March and April in 2020.   I chose eight color classifications for each map with specific reference to the local authorities without any deaths. 
-                              <div style="max-width: 700px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/COVIDEW.jpeg" alt="" style="width: 100%;" />
-            </span>
-          </div>								
+							  <p>This chapter is based on my activity during a few recent sessions of football.  The data for this series was generated using a wearable fitness tracker which calculated my spatial location in the form of point data for each second of the activity.  I was able to export this point data in GPS Exchange Format (also known as GPX) and load it into QGIS.&nbsp;</p>
+							  <p>The data is analysed to depict spatially my overall movement, average positioning and relative time spent in various areas on the field of play.  Two series of maps are displayed below (A and B1) and are based on my activity at two different footballing venues.&nbsp;</p>
+								<p>The first step of the analysis involved exporting the GPX files into shapefile format to enable the analysis of the data.  With the data in shapefile format, I was able to create a line series from the points to illustrate my overall movement throughout the sessions.  On the maps below, my movement is depicted as a continuous line, which is set to a width of 0.3 and shaded purple to contrast with the colour of the area of play. </p>
+<div style="max-width: 550px; margin: 0 auto;">
+        <span class="image featured">
+		<strong> A </strong><img src="images/Football/Ainsdale1.jpeg" alt="" style="width: 100%;"> <strong> 
+			B </strong><img src="images/Football/Dunes1.jpeg" alt="" style="width: 100%;"> </span>
+        </div>
+							  <p>Following this, I wanted to figure out my average positioning throughout each session. Using the raw point data, I executed the mean coordinate function to calculate the centre of mass and illustrate my mean positioning. The overall average position was the mean of all point data whereas the four-quarter averages were calculated by selecting the relevant data in the attribute table which was based on time.   
+  
+                              </p>
+								<div style="max-width: 550px; margin: 0 auto;">
+        <span class="image featured">
+		<strong> A </strong><img src="images/Football/Ainsdale2.jpeg" alt="" style="width: 100%;"> <strong> 
+			B </strong><img src="images/Football/Dunes2.jpeg" alt="" style="width: 100%;"> </span>
+        </div>
+							  <p>Using the point data, it was possible to create a heat map of my movement. This type of map is useful in illustrating my overall activity throughout the session as it identifies the spaces I occupied and visualises the intensity of my movement. I chose to use red as the band of colour as the shading clearly summarises the intensity of the point data in that space. </p>
+			<div style="max-width: 550px; margin: 0 auto;">
+        <span class="image featured">
+		<strong> A </strong><img src="images/Football/Ainsdale3.jpeg" alt="" style="width: 100%;"> <strong> 
+			B </strong><img src="images/Football/Dunes3.jpeg" alt="" style="width: 100%;"> </span>
+        </div>
+<p>The final maps in this section build on the previous heat-based representations by generating a graduated symbol to show the relative time spent in various spaces on the field of play. To do this, I divided the field of play into sixteen separate areas and totalled the number of points in each of these polygons. After generating a central point for each of the sixteen polygons, I joined the total number of points and represented the polygon centroid as a size relative to the point total. This is shown as several different sized grey circles and demonstrates the relative time and activity of movement in this general area. </p>
+			<div style="max-width: 550px; margin: 0 auto;">
+        <span class="image featured">
+		<strong> A </strong><img src="images/Football/Ainsdale4.jpeg" alt="" style="width: 100%;"> <strong> 
+			B </strong><img src="images/Football/Dunes4.jpeg" alt="" style="width: 100%;"> </span>
 												
                               </p>
-						</article>
+								<footer>
+								</footer>
+							</article>
 
 					</div>
 

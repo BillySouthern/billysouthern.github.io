@@ -102,42 +102,51 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">COVID-19 IN ENGLAND AND WALES</a></h2>
+										<h2><a href="#">My FPL 2021-2022</a></h2>
 								  </div>
 									<div class="meta">
 									  <p style="font-size: 16px;">
-										  <time class="published" datetime="2015-11-01">November, 2020&nbsp;</time>
+										  <time class="published" datetime="2015-11-01">June, 2022</time>
 									  </p>
                                     </div>
 								</header>
-								<p>This chapter illustrates my work on the geography of COVID-19 in England and Wales.  Using data sourced from the Office for National Statistics and Our World in Data, I have generated a few maps on the locational variations in deaths from COVID-19 and also total cases. </p>
-								<p>My initial projection shows the overall cases of COVID-19 in the UK throughout 2000 and 2022. Made in RStudio, the graphic shows the seven-day average and it is weighted heavily in the time periods where the UK has experienced the highest numbers of cases. 
-          <div style="max-width: 600px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/Spiral.jpg" alt="" style="width: 100%;" />
-            </span>
-          </div>
-							  <p>The following maps use data from an earlier time period.  I used QGIS to generate two cartograms which distort the data towards the higher totals, with the individual figure overlaid in choropleth form, and included a map of England and Wales to show the territories in their usual shape.  The calculation for the mass-based cartogram measures the deaths by COVID-19 data over the whole surface of each polygon.  This projects Greater London as a similar size to other regions.
-          <div style="max-width: 600px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/Mass2.jpeg" alt="" style="width: 100%;" />
-            </span>
-          </div>
-							  <p>The density equalizing cartogram furthers this analysis by calculating the ratio between the deaths by COVID-19 and the size of the region.  This calculation hugely distorts Greater London and projects the region as the largest polygon on the map.  This is because Greater London is the smallest region in England and Wales by area, but it demonstrates the highest deaths by COVID-19.
-          <div style="max-width: 500px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/Density.jpeg" alt="" style="width: 100%;" />
-            </span>
-          </div>
-							  <p>The final image takes choropleth form to highlight the number of deaths in the early stages of the pandemic, between March and April in 2020.   I chose eight color classifications for each map with specific reference to the local authorities without any deaths. 
-                              <div style="max-width: 700px; margin: 0 auto;">
-            <span class="image featured">
-              <img src="images/COVID/COVIDEW.jpeg" alt="" style="width: 100%;" />
-            </span>
-          </div>								
-												
+							  <p>Using RStudio and Excel, I’ve generated several charts to illustrate some final scores from the Fantasy Premier League Draft that I played in with a few friends throughout the 2021/2022 season. Metrics including points scored, points conceded, points difference, ranking, and overall league points were generated into long form in Excel as the 38 gameweeks progressed.</p>
+							  <p>The first chart was issued in Excel and was steadily created as the data was collated into the spreadsheet. It follows the overall league table throughout the season, with the colored lines representing the gameweek points total which indicates the overall ranking of each team. An uninterrupted and steeply angled line illustrates consecutive wins for the selected team.</p>
+<div style="max-width: 700px; margin: 0 auto;">
+        <span class="image featured">
+		<img src="images/FPL/Standings.png" alt="" style="width: 100%;"> 
+        </div>
+							  <p>Moving to the charts generated in RStudio, the first depiction includes a circular bar chart of the overall points scored for each team. The usefulness of this chart is how it illustrates so many totals in such a small area, for example DH scoring over 50 for the first three gameweeks, whilst also offering the data in an easily viewable mode.   
+  
                               </p>
-						</article>
+<div style="max-width: 550px; margin: 0 auto;">
+        <span class="image featured">
+		<img src="images/FPL/Circular.png" alt="" style="width: 100%;"> 
+        </div>
+							  <p>The time-series heatmap below uses the same data as the circular bar chart, but a continuous scale is applied to the data display. It might be a little more difficult to highlight a specific point score, but it is useful in showing general trends across multiple gameweeks, such as DW’s high scoring between week 25 and 30. This was made using the geom_tile function and the Color Brewer package. </p>
+<div style="max-width: 600px; margin: 0 auto;">
+        <span class="image featured">
+          <img src="images/FPL/Heatmap.png" alt="" style="width: 100%;" />
+        </span>
+        </div>												
+
+<p>Using the ggstatsplot package, I’ve generated a violin plot of the points scored throughout the season. This chart is useful for identifying the clustering of scores, such as JF at around 45 points, and also the median for each team. In this case, n denotes the number of game weeks in a Premier League and Fantasy season, and I enabled the outlier tagging to show when each team hit their single highest total.  
+
+ </p>
+<div style="max-width: 600px; margin: 0 auto;">
+        <span class="image featured">
+          <img src="images/FPL/Violin.png" alt="" style="width: 100%;" />
+        </span>
+        </div>												
+                              </p>The final few depictions illustrate how each team points scored differ from the points conceded. Dumbbell charts are great for showing how two totals differ, with MW demonstrating a wide range in scored and conceded points in this example.  Following this with a beeswarm chart highlights the individual figures of these metrics.  I used the patchwork package to combine a summary table of some other useful statistics with the beeswarm chart.</p>
+		<div style="max-width: 550px; margin: 0 auto;">
+        <span class="image featured">
+		<img src="images/FPL/Dumbbell.png" alt="" style="width: 100%;"> 
+			<img src="images/fpl/bEESWARM.PNG" alt="" style="width: 100%;"> </span>
+        </div>
+								<footer>
+								</footer>
+							</article>
 
 					</div>
 
