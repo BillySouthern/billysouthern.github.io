@@ -1,0 +1,68 @@
+/* ==============================
+   Custom overrides for layout
+   ============================== */
+
+/* Force minimum desktop width and allow horizontal scroll if browser shrinks */
+/* ==============================
+   Custom overrides for circular image
+   ============================== */
+.image.featured img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; /* centers the image */
+}
+
+
+/* Heading and paragraph inherit header's text-align, no inline style needed */
+header h2, header p {
+  margin: 10px 0;
+}
+
+/* Icons */
+.icons {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+
+
+.icons li a {
+  font-size: 36px;
+}
+
+
+
+.parallel-posts .posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;         /* spacing between articles */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.parallel-posts .posts li {
+  flex: 1 1 45%;      /* each article ~45% wide */
+  max-width: 45%;
+  box-sizing: border-box;
+  border-bottom: none; /* remove horizontal line */
+  margin-bottom: 0;    /* remove extra spacing from default li styling */
+  padding-bottom: 0;
+    border-bottom: none !important; /* force removal */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Remove dotted lines for parallel posts */
+.parallel-posts .posts li,
+.parallel-posts .posts li article,
+.parallel-posts .posts li article header {
+    border: none !important;   /* remove all borders */
+    margin: 0;
+    padding: 0;
+}
+
